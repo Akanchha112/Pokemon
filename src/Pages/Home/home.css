@@ -1,0 +1,29 @@
+.pokemon-data{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 100px;
+}
+.filter{
+    width: 100%;
+    text-align: center;
+    height: 50px;
+}
+.button-move{
+    color: white;
+    position: fixed;
+    z-index: 1000;
+    top: 600px;
+    left: 30px;
+    width: 100px;
+    background-color: rgb(202, 202, 202);
+    border: 0;
+    height: 30px;
+}
+.trigger{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}

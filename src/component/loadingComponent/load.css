@@ -1,0 +1,22 @@
+.card{
+    width: 340px;
+    background-color: rgb(255, 255, 255);
+    height: 400px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 10px grey;
+}
+.image{
+    height: 40%;
+    width: 100%;
+    background-color: rgb(204, 204, 204);
+    text-align: center;
+    border-radius: 10px 10px 0 0;
+    /* box-shadow: ; */
+}
+
+.data{
+    height: 59%;
+    width: 100%;
+    padding: 20px;
+}
