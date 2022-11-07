@@ -8,7 +8,7 @@ import LoadPage from "../../component/loadingComponent/loadpage";
 const NUM_PER_PAGE = 6;
 const TOTAL_PAGES = 16;
 
-export default function Landing({ array }) {
+export default function Landing({ array, waitloading }) {
     const [filteredArray, setFilteredArray] = useState([]);
 
     const triggerRef = useRef(null);
@@ -34,24 +34,30 @@ export default function Landing({ array }) {
 
     return (
         <>
-            <div className="pokemon-data">
 
-                {data.map((item, key) => {
+            {waitloading ? (<div className="loading">loading...</div>) : null}
+            {!waitloading ? (
+                <div className="pokemon-data">
 
-                    return (
+                    {data.map((item, key) => {
 
-                        <PokemonData
-                            key={key}
-                            name={item.name}
-                            imagesrc={item.sprites.front_default}
-                            abilities={item.abilities}
-                            types={item.types}
-                        />
+                        return (
 
-                    )
-                })}
+                            <PokemonData
+                                key={key}
+                                name={item.name}
+                                imagesrc={item.sprites.front_default}
+                                abilities={item.abilities}
+                                types={item.types}
+                            />
 
-            </div>
+                        )
+                    })}
+
+                </div>
+            ) : null}
+
+
             <div ref={triggerRef} className={clsx("trigger", { visible: loading })} > <LoadPage /></div>
             <button className="button-move"> <Link to="/"> Previous Page</Link> </button>
         </>

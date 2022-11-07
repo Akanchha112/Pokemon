@@ -27,3 +27,8 @@
     flex-wrap: wrap;
     justify-content: center;
 }
+.loading{
+    position: fixed;
+    top: 200px;
+    left: 45%;
+}
